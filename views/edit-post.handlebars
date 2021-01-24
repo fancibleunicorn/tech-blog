@@ -1,20 +1,22 @@
 <article>
-  <a href="/dashboard"> &larr; Back to dashboard</a>
-  <h2>
-    Edit Post
-  </h2>
-  <form class="edit-post-form">
-    <div>
-        <label for="post-title">Title</label>
-        <input name="post-title" type="text" value="{{post.title}}" />
-    </div>
-    <div>
-      <label for="post-text">Content</label>
-      <textarea id="post-text" name="post-text">{{post.post_text}}</textarea>
-    </div>
-    <button type="submit">Save post</button>
-    <button type="button" class="delete-post-btn">Delete post</button>
-  </form>
+  <a href="/dashboard" class="btn btn-info m-2"> &larr; Back to dashboard</a>
+  <div class="card-body bg-info">
+    <h2 class="card-title">
+      Edit Post
+    </h2>
+    <form class="edit-post-form row p-3">
+      <div class="col-12">
+          <label for="post-title" class="col-12 text-info">Title:</label>
+          <input name="post-title" type="text" value="{{post.title}}" style="width:100%;"  />
+      </div>
+      <div class="col-12">
+        <label for="post-text" class="col-12 text-info">Content</label>
+        <textarea id="post-text" name="post-text" rows="5" style="width:100%;">{{post.post_text}}</textarea>
+      </div>
+      <button type="submit" class="btn btn-info mr-1">Save post</button>
+      <button type="button" class="delete-post-btn btn btn-info ml-1">Delete post</button>
+    </form>
+  </div>
 </article>
 
 <script src="/javascript/edit-post.js"></script>

@@ -1,0 +1,62 @@
+body {
+    background-color: rgb(204, 219, 204);
+}
+
+header, footer {
+    background-color: rgb(10, 65, 73);
+}
+
+li {
+    list-style: none;
+}
+
+.card-title {
+    color: rgb(204, 219, 204);
+}
+
+.card-text {
+    color: rgb(10, 65, 73);
+}
+
+form {
+    background-color: rgb(204, 219, 204);
+}
+
+.your-posts {
+    background-color: rgb(204, 219, 204);
+}
+
+.comments {
+    background-color: rgb(204, 219, 204);
+}
+
+.meta {
+    color: rgb(10, 65, 73);
+}
+
+.post-content {
+    color: rgb(204, 219, 204);
+}
+
+
+.card-title:hover {
+    color: rgb(8, 78, 88);
+}
+
+.btn-no-style {
+    background: none!important;
+    border: none;
+    padding: 0!important;
+    text-decoration: none;
+    color: rgb(23, 162, 184);
+    cursor: pointer;
+  }
+
+.nav-btn:hover {
+    color: rgb(8, 78, 88);
+}
+
+  .btn-no-style:hover {
+    color: rgb(8, 78, 88);
+    text-decoration: underline;
+  }
