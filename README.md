@@ -1,11 +1,11 @@
 # tech-trek
-![Project Image](/assets/projectimage.jpeg)
+![Project Image](/assets/projectimage.jpg)
 
   ## Description
 
 a full-stack blogging site that allows you to create an account, view, create, edit, and comment on posts.
   
-To view a deployed application, [Click Here](http://safe-garden-46107.herokuapp.com/)
+To view the deployed application, [Click Here](http://safe-garden-46107.herokuapp.com/)
   
   ## Table of Contents
   
