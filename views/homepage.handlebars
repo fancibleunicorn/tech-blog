@@ -1,14 +1,7 @@
 <ol class="post-list">
   {{#each posts as |post|}}
   <li>
-    <article class="post">
-      <div class="post-title">
-        <h1><a href="/post/{{post.id}}">{{title}}<a></h1>
-        <h4>
-        Posted by {{user.username}} on {{created_at}}
-        </h4>
-      </div>
-    </article>
+     {{> post-info post }}
   </li>
   {{/each}}
 </ol>
