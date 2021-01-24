@@ -1,20 +1,12 @@
 const router = require('express').Router();
-const { Post, User, Comment } = require('../../models');
+const { Post, User} = require('../../models');
 
 // GET /api/posts
 router.get('/', (req, res) => {
     Post.findAll({
-      attributes: ['id', 'post_url', 'title', 'created_at'],
+      attributes: ['id', 'post_text', 'title', 'created_at'],
       order: [['created_at', 'DESC']],
       include: [
-        {
-          model: Comment,
-          attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
-          include: {
-            model: User,
-            attributes: ['username']
-          }
-        },
         {
           model: User,
           attributes: ['username']
@@ -34,19 +26,11 @@ router.get('/', (req, res) => {
       where: {
         id: req.params.id
       },
-      attributes: ['id', 'post_url', 'title', 'created_at'],
+      attributes: ['id', 'post_text', 'title', 'created_at'],
       include: [
         {
           model: User,
           attributes: ['username']
-        },
-        {
-          model: Comment,
-          attributes: ['id', 'comment_text', 'created_at'],
-          include: {
-            model: Post,
-            attributes: ['title']
-          }
         }
       ]
     })
@@ -67,7 +51,7 @@ router.get('/', (req, res) => {
   router.post('/', (req, res) => {
     Post.create({
       title: req.body.title,
-      post_url: req.body.post_url,
+      post_text: req.body.post_text,
       user_id: req.body.user_id
     })
       .then(dbPostData => res.json(dbPostData))
