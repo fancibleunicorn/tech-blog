@@ -1,13 +1,14 @@
 {{> single-post-info post }}
 
 {{#if loggedIn}}
-<form class="comment-form">
-  <div>
-    <textarea name="comment-body"></textarea>
+<form class="comment-form row p-3">
+  <div class="col-12">
+    <label for="comment-body" class="col-12 text-info">Comment:</label>
+    <textarea name="comment-body" rows="5" style="width:50%;"></textarea>
   </div>
 
-  <div>
-    <button type="submit">add comment</button>
+  <div class="col-12 mb-3">
+    <button type="submit" class="btn btn-info">add comment</button>
   </div>
 </form>
 {{/if}}

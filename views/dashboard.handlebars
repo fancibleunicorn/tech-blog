@@ -1,27 +1,29 @@
-<section>
-  <h2>Create New Post</h2>
+<article>
+  <div class="card-body bg-info">
+    <h2 class="card-title">Create New Post</h2>
 
-  <form class="new-post-form">
-    <div>
-      <label for="post-title">Title</label>
-      <input type="text" id="post-title" name="post-title" />
-    </div>
-    <div>
-      <label for="post-text">Content</label>
-      <textarea id="post-text" name="post-text"></textarea>
-    </div>
-    <button type="submit" class="btn">Create</button>
-  </form>
-</section>
+    <form class="new-post-form row p-3">
+      <div class="col-12">
+        <label for="post-title" class="col-12 text-info">Title:</label>
+        <input type="text" id="post-title" name="post-title" style="width:100%;" />
+      </div>
+      <div class="col-12">
+        <label for="post-text" class="col-12 text-info">Content:</label>
+        <textarea id="post-text" name="post-text" rows="5" style="width:100%;"></textarea>
+      </div>
+      <button type="submit" class="btn btn-info">Create</button>
+    </form>
+  </div>
+</article>
 
 {{#if posts.length}}
-<section>
-  <h2>Your Posts</h2>
-  <ol>
+<section class="bg-info">
+  <h2 class="card-title pl-4">Your Posts</h2>
+  <ol class="list-group">
     {{#each posts as |post|}}
-    <li>
+    <li class="list-group-item your-posts">
       {{> dashboard-post post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+      <a href="/dashboard/edit/{{post.id}}" class="edit-link btn btn-info mt-2">Edit post</a>
     </li>
     {{/each}}
   </ol>

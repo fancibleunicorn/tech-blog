@@ -1,11 +1,13 @@
-<article class="post">
+<article>
+  <div class="card-body bg-info">
      <div class="post-title">
-        <h1>{{title}}</h1>
-        <h4>
+        <h1 class="card-title">{{title}}</h1>
+        <h4 class="card-text">
         Posted by {{user.username}} on {{format_date created_at}} {{comments.length}} {{format_plural "comment" comments.length}}
         </h4>
       </div>
-      <div class="post-text">
-        <span>{{post_text}}</span>
+      <div class="post-text card-text">
+        <span class="post-content">{{post_text}}</span>
       </div>
+    </div>
 </article>
